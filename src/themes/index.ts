@@ -16,6 +16,7 @@ import {
   PaletteColorOptions,
   PaletteOptions,
 } from '@mui/material/styles';
+import { ChipTheme } from '../components/chip/ChipTheme';
 
 declare module '@mui/material/styles' {
   interface Palette {
@@ -465,6 +466,9 @@ export const defaultTheme: ThemeOptions = {
           fontSize: `1rem`,
         },
       },
+    },
+    MuiChip: {
+      ...ChipTheme(palette),
     },
     MuiCssBaseline: {
       styleOverrides: () => ({
